@@ -20,10 +20,10 @@ Der Kunde stellt dabei folgende Anforderungen:
 
 Der Datenschutzbeauftrage von Kraut und Rüben bittet Sie zusätzlich um Folgendes:
 
-Erläutern Sie in Bezug auf die angepasste Datenbank die geltenden rechtlichen Vorgaben des Datenschutzes und machen Sie einen Vorschlag für ein rechtskonformes Datenschutzkonzept.
-Machen Sie sich mit den rechtlichen Vorgaben des Datenschutzes vertraut und definieren Sie, welche personenbezogenen Daten wie verwendet werden.
-Erstellen Sie anschließend eine Datenschutzerklärung für Ihren Kunden.
-Entwickeln Sie erste Ideen, wie die geltenden Datenschutzbestimmungen im Sinne der Datensicherheit umgesetzt werden könnten und unterbreiten Sie diese dem Datenschutzbeauftragten.
+    Erläutern Sie in Bezug auf die angepasste Datenbank die geltenden rechtlichen Vorgaben des Datenschutzes und machen Sie einen Vorschlag für ein rechtskonformes Datenschutzkonzept.
+    Machen Sie sich mit den rechtlichen Vorgaben des Datenschutzes vertraut und definieren Sie, welche personenbezogenen Daten wie verwendet werden.
+    Erstellen Sie anschließend eine Datenschutzerklärung für Ihren Kunden.
+    Entwickeln Sie erste Ideen, wie die geltenden Datenschutzbestimmungen im Sinne der Datensicherheit umgesetzt werden könnten und unterbreiten Sie diese dem Datenschutzbeauftragten.
 
 ## Anforderungen an die von Ihnen zu entwickelnden Abfragen:
 
