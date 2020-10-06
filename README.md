@@ -1,4 +1,5 @@
-# lernfeld_05
+# Lernfeld 05 IT - Software zur Verwaltung von Daten anpassen
+
 Lernfeld 05 - Biokiste entwikeln mit eine Datenbanken. 
 
 ## Die Aufgabenstellung
@@ -19,22 +20,22 @@ Der Kunde stellt dabei folgende Anforderungen:
 
 Der Datenschutzbeauftrage von Kraut und Rüben bittet Sie zusätzlich um Folgendes:
 
-    Erläutern Sie in Bezug auf die angepasste Datenbank die geltenden rechtlichen Vorgaben des Datenschutzes und machen Sie einen Vorschlag für ein rechtskonformes Datenschutzkonzept.
-    Machen Sie sich mit den rechtlichen Vorgaben des Datenschutzes vertraut und definieren Sie, welche personenbezogenen Daten wie verwendet werden.
-    Erstellen Sie anschließend eine Datenschutzerklärung für Ihren Kunden.
-    Entwickeln Sie erste Ideen, wie die geltenden Datenschutzbestimmungen im Sinne der Datensicherheit umgesetzt werden könnten und unterbreiten Sie diese dem Datenschutzbeauftragten.
+Erläutern Sie in Bezug auf die angepasste Datenbank die geltenden rechtlichen Vorgaben des Datenschutzes und machen Sie einen Vorschlag für ein rechtskonformes Datenschutzkonzept.
+Machen Sie sich mit den rechtlichen Vorgaben des Datenschutzes vertraut und definieren Sie, welche personenbezogenen Daten wie verwendet werden.
+Erstellen Sie anschließend eine Datenschutzerklärung für Ihren Kunden.
+Entwickeln Sie erste Ideen, wie die geltenden Datenschutzbestimmungen im Sinne der Datensicherheit umgesetzt werden könnten und unterbreiten Sie diese dem Datenschutzbeauftragten.
 
 ## Anforderungen an die von Ihnen zu entwickelnden Abfragen:
 
-    Setzen Sie die folgenden Anforderungen durch Ihre SQL-Abfragen um
-                * Auswahl eines Rezeptes nach Rezeptname
-                * Auswahl aller Rezepte einer bestimmten Ernährungskategorie
-                * Auswahl aller Rezepte, die eine gewisse Zutat enthalten
-                * Berechnung der durchschnittlichen Nährwerte aller Bestellungen eines Kunden
-                * Auswahl aller Zutaten, die bisher keinem Rezept zugeordnet sind
-        __optional für FiSi und ITSE bzw. verpflichtend für FIAE und FIDP:__
-                Auswahl aller Rezepte, die eine bestimmte Kalorienmenge nicht überschreiten 
-                Auswahl aller Rezepte, die weniger als fünf Zutaten enthalten
-                Auswahl aller Rezepte, die weniger als fünf Zutaten enthalten und eine bestimmte Ernährungskategorie erfüllen
-    Erstellen Sie mindestens drei weitere Abfragen
-    Stellen Sie sicher, dass Sie insgesamt mindestens je eine Abfrage mit inner join, left join/ right join sowie Subselects und Aggregatfunktionen erstellen
+*Setzen Sie die folgenden Anforderungen durch Ihre SQL-Abfragen um
+*Auswahl eines Rezeptes nach Rezeptname
+*Auswahl aller Rezepte einer bestimmten Ernährungskategorie
+*Auswahl aller Rezepte, die eine gewisse Zutat enthalten
+*Berechnung der durchschnittlichen Nährwerte aller Bestellungen eines Kunden
+*Auswahl aller Zutaten, die bisher keinem Rezept zugeordnet sind
+__optional für FiSi und ITSE bzw. verpflichtend für FIAE und FIDP:__
+*Auswahl aller Rezepte, die eine bestimmte Kalorienmenge nicht überschreiten 
+*Auswahl aller Rezepte, die weniger als fünf Zutaten enthalten
+*Auswahl aller Rezepte, die weniger als fünf Zutaten enthalten und eine bestimmte Ernährungskategorie erfüllen
+*Erstellen Sie mindestens drei weitere Abfragen
+*Stellen Sie sicher, dass Sie insgesamt mindestens je eine Abfrage mit inner join, left join/ right join sowie Subselects und Aggregatfunktionen erstellen
