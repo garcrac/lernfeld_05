@@ -34,7 +34,7 @@ Datenschutzbeauftragten.
 * Auswahl aller Rezepte, die eine gewisse Zutat enthalten
 * Berechnung der durchschnittlichen Nährwerte aller Bestellungen eines Kunden
 * Auswahl aller Zutaten, die bisher keinem Rezept zugeordnet sind
-⋅⋅⋅__optional für FiSi und ITSE bzw. verpflichtend für FIAE und FIDP:__
+__optional für FiSi und ITSE bzw. verpflichtend für FIAE und FIDP:__
 *Auswahl aller Rezepte, die eine bestimmte Kalorienmenge nicht überschreiten 
 *Auswahl aller Rezepte, die weniger als fünf Zutaten enthalten
 *Auswahl aller Rezepte, die weniger als fünf Zutaten enthalten und eine bestimmte Ernährungskategorie erfüllen
