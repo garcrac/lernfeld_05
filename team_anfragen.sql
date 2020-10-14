@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 --Auswahl eines Rezeptes nach Rezeptname-----
 
 select Bezeichnung from Rezept 
@@ -103,5 +102,3 @@ select Rezept
                     and Kategorie like 'x'
                     
 ;
-=======
->>>>>>> 4887cb25eacdb71bc4768e1c73ae76f6c1793eca
