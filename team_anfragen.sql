@@ -100,5 +100,12 @@ select Rezept
                                         and*/ Kategorie like 'x') < 5
                     /*and Rezept = X*/
                     and Kategorie like 'x'
-                    
+;
+-- Auswahl aller Zutaten anhand eines Rezeptnames
+select ZUTAT.BEZEICHNUNG
+    from    REZEPT 
+                        join REZEPTZUTAT on REZEPTZUTAT.REZEPTNR = REZEPT.REZEPTNR
+                        join   ZUTAT on ZUTAT.ZUTATENNR = REZEPTZUTAT.ZUTATENNR
+     where 
+            REZEPT.BEZEICHNUNG like 'Grüner Smoothie'
 ;
