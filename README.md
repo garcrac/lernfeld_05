@@ -1,5 +1,7 @@
-# Lernfeld 05 IT - Software zur Verwaltung von Daten anpassen
+# Lernfeld 05 IT
+# Software zur Verwaltung von Daten anpassen
 
+![Biokiste img](https://picresize.com/popup.html?images/rsz_azora-coop-regular-veg-box.jpg)
 Lernfeld 05 - Biokiste entwikeln mit eine Datenbanken. 
 
 ## Die Aufgabenstellung
