@@ -107,5 +107,19 @@ select ZUTAT.BEZEICHNUNG
                         join REZEPTZUTAT on REZEPTZUTAT.REZEPTNR = REZEPT.REZEPTNR
                         join   ZUTAT on ZUTAT.ZUTATENNR = REZEPTZUTAT.ZUTATENNR
      where 
-            REZEPT.BEZEICHNUNG like 'Grüner Smoothie'
+            REZEPT.BEZEICHNUNG like 'Grüner Smoothie';
+            
+-- Auswahl aller Zuaten aller rezept bestellungen
+
+select kunde.nachname, kunde.vorname, bestellung.bestelldatum,
+rezept.bezeichnung as Rezept, zutat.bezeichnung as zutat
+from kunde
+inner join bestellung on kunde.kundennr = bestellung.kundennr
+inner join rezeptbestell on bestellung.bestellnr =
+rezeptbestell.bestellnr
+inner join rezept on rezeptbestell.rezeptnr = rezept.rezeptnr
+inner join rezeptzutat on rezept.REZEPTNR = rezeptzutat.REZEPTNR
+inner join zutat on rezeptzutat.ZUTATENNR = zutat.ZUTATENNR
+order by bestelldatum desc
+
 ;
