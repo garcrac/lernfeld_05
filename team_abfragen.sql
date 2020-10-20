@@ -1,106 +1,153 @@
---Auswahl eines Rezeptes nach Rezeptname-----
+use Krautundrueben;
+-- Auswahl eines Rezeptes nach Rezeptname-----
 
 select Bezeichnung from Rezept 
-    where Bezeichnung like 'X'
+    where Bezeichnung = 'Grüner Smoothie'
 ;
 
---Auswahl aller Rezepte einer bestimmten Ernährungskategorie--
+-- Auswahl aller Rezepte einer bestimmten Ernährungskategorie--
 
-select Bezeichung  
+select r.Bezeichnung  
             
     from                  Rezept as r
-                        , Kategorie as k
-                        , KategorieRezept as kr
+                        ,Kategorie as k
+                        ,KategorieRezept as kr
     where 
             k.KategorieNr = kr.KategorieNr 
         and r.RezeptNr = kr.RezeptNr
-        and Kategorie like 'X'
+        and k.Bezeichnung = 'Vegan'
 ;
 
---Auswahl aller Rezepte, die eine gewisse Zutat enthalten--
+-- Auswahl aller Rezepte, die eine gewisse Zutat enthalten--
 
-select Rezept 
+select r.Bezeichnung as 'Rezept Name', z.Bezeichnung as 'Zutat Name'
     from    Rezept as r 
                         join RezeptZutat as rz on r.RezeptNr = rz.RezeptNr
-                        join   Zutat as z on z.ZutatNr = rz.ZutatNr
+                        join   Zutat as z on z.ZutatenNr = rz.ZutatenNr
      where 
-            Zutat like 'X'
-            Or Zutat like 'X'
+            z.Bezeichnung = 'Ei'
+            
 ;
 
--- Berechnung der durchschnittlichen Nährwerte aller Bestellungen eines Kunden--
+-- Berechnung der durchschnittlichen Nährwerte aller Bestellungen eines Kundes--
 
-select  Kunde
-        ,BestellungNr
-        ,avg(Naehrwerte) as 'Durchscnittliche Angaben von Naehrwerte'
-    from 
-        Kunde as k
-                    join Beschtellung as B      ON  k.KundenNr = b.KundenNr
-                    join BestellZutat as bz     ON  z.BestellungNr = bz.BestellungNr
-                    join Zutat as Z             On z.ZutatNr = bz.ZutatNr 
-                    join BestellRezept as BR    On r.BestellungNr = br.BestellungNr
-                    join Rezept as r            On r.RezeptNr = rz.RezeptNr
-                    join RezeptZutat as rz      On z.ZutatNr = rz.ZutatNr
-                    join Naehrwerte as nw       On nw.NaehrwerteID = nwz.NaehrwerteID
-                    join NaehrwerteZutat as nwz On z.ZutatNr = nwz.ZutatNr
+select  k.Nachname
+		,k.Vorname
+        ,b.BestellNr
+        ,avg(z.Kalorien*bz.MENGE)  
+			as 'Kalorien in kcal'
+        ,avg(z.Kohlenhydrate*bz.MENGE) 
+			 as 'Kohlenhydrate in g'
+        ,avg(z.Protein*bz.MENGE) 
+			 as 'Protein in g'
+   
+        from  Kunde as k
+                     join Bestellung as B      ON  k.KundenNr = b.KundenNr
+                     join BestellZutat as bz     ON  b.BestellNr = bz.BestellNr
+                     join Zutat as Z             On z.ZutatenNr = bz.ZutatenNr
     where 
-            KundenNr = x
-;
+            k.KundenNr = 2003
+		Group by  k.Nachname
+				 ,k.Vorname
+			     ,b.BestellNr
+; 
 
 -- Auswahl aller Zutaten, die bisher keinem Rezept zugeordnet sind--
 
-Select Zutat    
+Select Z.Bezeichnung as 'Zutat Name'    
     from     Zutat as z
-                   left outer join RezeptZutat as rz      On z.ZutatNr = rz.ZutatNr
+                   left outer join RezeptZutat as rz      On z.ZutatenNr = rz.ZutatenNr
                     
     where 
-            rz.ZutatNr is null
+            rz.ZutatenNr is null
 ;
 
---* Auswahl aller Rezepte, die eine bestimmte Kalorienmenge nicht überschreiten --
+--  Auswahl aller Rezepte, die eine bestimmte Kalorienmenge nicht überschreiten --
 
-select  Rezept
-        ,(select avg(Naehrwerte) 
-            where   Naehrwerte like 'Kalor%'
-                and Menge !> x) as 'avg Kalorien Menge'
+
+select s.RezeptNr
+	   ,s.n as 'Rezept Name'
+	   ,s.m as 'Kalorien in kcal'
+    
     from 
-                NaehrWerte nw 
-        join    NaehrwerteZutat as nwz      on nw.NaehrwerteID = nwz.NaehrwerteId
-        join    Zutat as z                  on z.ZutatNr = nwz.ZutatNr
-        join    RezeptZutat as rz           on z.ZutatNr = rz.ZutatNr   
-        join    Rezept as R                 on r.RezeptNr = rz.RezeptNr 
-            where   Naehrwerte like 'Kalor%'
-                and Menge !> x 
-;
+		
+			(select   
+					 rz.RezeptNr
+					 ,r.Bezeichnung as 'n'
+					 ,avg(kalorien) as 'm'
+				from 
+							
+						Zutat as z                  
+					join    RezeptZutat as rz           on z.ZutatenNr = rz.ZutatenNr   
+					join    Rezept as R                 on r.RezeptNr = rz.RezeptNr 
+					
+					
+				   Group by rz.RezeptNr
+			  ) as s
+            
+            
+		where 
+        
+			s.m < 92
+					
+               
+; 
 
 
---Auswahl aller Rezepte, die weniger als fünf Zutaten enthalten--
+-- Auswahl aller Rezepte, die weniger als fünf Zutaten enthalten--
 
-select Rezept 
-    From    Zutat as z
-                       inner join    RezeptZutat as rz           on z.ZutatNr = rz.ZutatNr   
-                       inner join    Rezept as R                 on r.RezeptNr = rz.RezeptNr 
-            where 
-                    (select count (ZutatNr) from RezeptZutat
-                                    /*where RezeptNr = x*/) < 5
-                    --and Rezept = X
+
+select s.n as 'Rezept Name'
+	  ,s.m as 'Zahl der Zutaten'
+      
+	from
+
+			(select distinct r.Bezeichnung as 'n' 
+					,count(rz.ZutatenNr) as 'm'
+							
+				   
+				From    Zutat as z
+									join    RezeptZutat as rz           on z.ZutatenNr = rz.ZutatenNr   
+									join    Rezept as R                 on r.RezeptNr = rz.RezeptNr 
+					   
+						group by r.Bezeichnung
+			 ) as s
+			
+		where 
+			s.m < 5
+					
+						
 ;
 
 -- Auswahl aller Rezepte, die weniger als fünf Zutaten enthalten und eine bestimmte Ernährungskategorie erfüllen--
-select Rezept 
-    From    Zutat as z
-                       inner join    RezeptZutat as rz           on z.ZutatNr = rz.ZutatNr   
-                       inner join    Rezept as R                 on r.RezeptNr = rz.RezeptNr 
-                       join          KategorieRezept as kr       On kr.RezeptNr = r.RezeptNr
-                       JOIN          Kategorie as k              On k.KategorieNr = kr.KategorieNr
 
-            where 
-                    (select count (ZutatNr) from RezeptZutat rz, KategoriRezept as kr
-                                    where /*rz.RezeptNr = x
-                                        and*/ Kategorie like 'x') < 5
-                    /*and Rezept = X*/
-                    and Kategorie like 'x'
+select s.n as 'Rezept Name'
+	   ,s.m as 'Zahl der Zutaten'
+       ,s.x as 'Ernährungskategorie'
+       
+	from
+
+				(select r.Bezeichnung as n
+						,k.Bezeichnung as x
+					   ,count(rz.ZutatenNr) as m
+					From    Zutat as z
+									   inner join    RezeptZutat as rz           on z.ZutatenNr = rz.ZutatenNr   
+									   inner join    Rezept as R                 on r.RezeptNr = rz.RezeptNr 
+									   join          KategorieRezept as kr       On kr.RezeptNr = r.RezeptNr
+									   JOIN          Kategorie as k              On k.KategorieNr = kr.KategorieNr
+												
+												group by r.Bezeichnung
+														,k.Bezeichnung
+				) as s
+                                                
+		Where 	
+				s.m < 5
+			and s.x = 'Vegan'
+
+           
 ;
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Auswahl aller Zutaten anhand eines Rezeptnames
 select ZUTAT.BEZEICHNUNG
     from    REZEPT 
