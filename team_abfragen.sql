@@ -121,5 +121,9 @@ inner join rezept on rezeptbestell.rezeptnr = rezept.rezeptnr
 inner join rezeptzutat on rezept.REZEPTNR = rezeptzutat.REZEPTNR
 inner join zutat on rezeptzutat.ZUTATENNR = zutat.ZUTATENNR
 order by bestelldatum desc
-
 ;
+--
+select rezept.bezeichnung, kategorie.bezeichnung as Ernaehrungskategorie from rezept
+join kategorierezept on kategorierezept.REZEPTNR = rezept.REZEPTNR
+join kategorie on kategorierezept.KATEGORIENR = kategorie.KATEGORIENR
+where kategorie.BEZEICHNUNG like 'Low-Carb';
