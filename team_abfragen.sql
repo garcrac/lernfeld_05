@@ -122,8 +122,25 @@ inner join rezeptzutat on rezept.REZEPTNR = rezeptzutat.REZEPTNR
 inner join zutat on rezeptzutat.ZUTATENNR = zutat.ZUTATENNR
 order by bestelldatum desc
 ;
---
+-- Auswahl aller Rezepte anhand des Kategorienamens
 select rezept.bezeichnung, kategorie.bezeichnung as Ernaehrungskategorie from rezept
 join kategorierezept on kategorierezept.REZEPTNR = rezept.REZEPTNR
 join kategorie on kategorierezept.KATEGORIENR = kategorie.KATEGORIENR
 where kategorie.BEZEICHNUNG like 'Low-Carb';
+
+-- Auswahl aller Rezepte mit zugehoerigen Kategorien 
+SELECT REZEPT.BEZEICHNUNG, KATEGORIE.BEZEICHNUNG 
+FROM REZEPT 
+JOIN KATEGORIEREZEPT ON REZEPT.REZEPTNR = KATEGORIEREZEPT.REZEPTNR
+JOIN KATEGORIE ON KATEGORIE.KATEGORIENR = KATEGORIEREZEPT.KATEGORIENR
+ORDER BY REZEPT.BEZEICHNUNG desc
+;
+
+-- Auswahl aller Rezepte, die eine gewisse Zutat enthalten
+SELECT REZEPT.BEZEICHNUNG, ZUTAT.BEZEICHNUNG
+FROM REZEPT 
+JOIN REZEPTZUTAT ON REZEPT.REZEPTNR = REZEPTZUTAT.REZEPTNR
+JOIN ZUTAT ON REZEPTZUTAT.ZUTATENNR = ZUTAT.ZUTATENNR
+WHERE ZUTAT.BEZEICHNUNG = 'Ei'
+ORDER BY REZEPT.BEZEICHNUNG
+;
