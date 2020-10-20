@@ -3,7 +3,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)]
 
-![Biokiste img](images/gemuse.jpg) 
+<img src="images/gemuse.jpg" alt="Live Server Demo VSCode" style="max-width:100%, height: 40px;">
 
 ## Die Aufgabenstellung
 
