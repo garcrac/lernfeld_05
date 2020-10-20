@@ -3,7 +3,7 @@
 
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
 
-<img src="images/gemuse.jpg" alt="Live Server Demo VSCode" style="max-width:100%, height:40px;">
+<img src="images/gemuse.jpg" alt="Live Server Demo VSCode" style="max-width:100%; height:600px;">
 
 ## Die Aufgabenstellung
 
@@ -13,21 +13,20 @@ Ihre Aufgabe ist es, die bestehende Datenbank so zu erweitern, dass die gewünsc
 
 Der Kunde stellt dabei folgende Anforderungen:
 
-    Speicherung von Rezepten bestehend aus mehreren Zutaten
-    Speicherung von Ernährungskategorien
-    Speicherung von Beschränkungen/ Allergenen
-    Zusammenstellung von Zutaten entsprechend eines Rezepts
-    Auswahl von Rezepten entsprechend vorgegebener Ernährungskategorien
-    Auswahl bzw. Ausschluss von Rezepten auf Basis von Beschränkungen
-    Zugriffskontrolle personenbezogener Daten
+> Speicherung von Rezepten bestehend aus mehreren Zutaten
+> Speicherung von Ernährungskategorien
+> Speicherung von Beschränkungen/ Allergenen
+> Zusammenstellung von Zutaten entsprechend eines Rezepts
+> Auswahl von Rezepten entsprechend vorgegebener Ernährungskategorien
+> Auswahl bzw. Ausschluss von Rezepten auf Basis von Beschränkungen
+> Zugriffskontrolle personenbezogener Daten
 
 Der Datenschutzbeauftrage von Kraut und Rüben bittet Sie zusätzlich um Folgendes:
 
-+ Erläutern Sie in Bezug auf die angepasste Datenbank die geltenden rechtlichen Vorgaben des Datenschutzes und machen Sie einen Vorschlag für ein rechtskonforme Datenschutzkonzept.
-+ Machen Sie sich mit den rechtlichen Vorgaben des Datenschutzes vertraut und definieren Sie, welche personenbezogenen Daten wie verwendet werden.
-+ Erstellen Sie anschließend eine Datenschutzerklärung für Ihren Kunden.
-+ Entwickeln Sie erste Ideen, wie die geltenden Datenschutzbestimmungen im Sinne der Datensicherheit umgesetzt werden könnten und unterbreiten Sie diese de
-Datenschutzbeauftragten.
+> Erläutern Sie in Bezug auf die angepasste Datenbank die geltenden rechtlichen Vorgaben des Datenschutzes und machen Sie einen Vorschlag für ein rechtskonforme Datenschutzkonzept.
+> Machen Sie sich mit den rechtlichen Vorgaben des Datenschutzes vertraut und definieren Sie, welche personenbezogenen Daten wie verwendet werden.
+> Erstellen Sie anschließend eine Datenschutzerklärung für Ihren Kunden.
+> Entwickeln Sie erste Ideen, wie die geltenden Datenschutzbestimmungen im Sinne der Datensicherheit umgesetzt werden könnten und unterbreiten Sie diese de Datenschutzbeauftragten.
 
 ## Anforderungen an die von Ihnen zu entwickelnden Abfragen:
 
@@ -42,4 +41,8 @@ Datenschutzbeauftragten.
    * Auswahl aller Rezepte, die weniger als fünf Zutaten enthalten
    * Auswahl aller Rezepte, die weniger als fünf Zutaten enthalten und eine bestimmte Ernährungskategorie erfüllen
 * Erstellen Sie mindestens drei weitere Abfragen
-* Stellen Sie sicher, dass Sie insgesamt mindestens je eine Abfrage mit inner join, left join/ right join sowie Subselects und Aggregatfunktionen erstellen
+* Stellen Sie sicher, dass Sie insgesamt mindestens je eine Abfrage mit **_inner join, left join/ right join_** sowie **_Subselects_** und **_Aggregatfunktionen_** erstellen
+
+## Lizenz
+
+Diese Datenbank ist unter der [Apache-Lizenz](LICENCE) lizenziert.
