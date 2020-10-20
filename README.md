@@ -1,9 +1,9 @@
 # Software zur Verwaltung von Daten anpassen
 > Lernfeld 05 IT
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)]
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
 
-<img src="images/gemuse.jpg" alt="Live Server Demo VSCode" style="max-width:100%, height: 40px;">
+<img src="images/gemuse.jpg" alt="Live Server Demo VSCode" style="max-width:100%, height:40px;">
 
 ## Die Aufgabenstellung
 
