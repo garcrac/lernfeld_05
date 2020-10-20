@@ -1,9 +1,9 @@
-# Lernfeld 05 IT
 # Software zur Verwaltung von Daten anpassen
+> Lernfeld 05 IT
 
-![Biokiste img](vegbox.jpg)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)]
 
-Lernfeld 05 - Biokiste entwikeln mit eine Datenbanken. 
+![Biokiste img](images/gemuse.jpg) 
 
 ## Die Aufgabenstellung
 
