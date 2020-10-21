@@ -1,16 +1,28 @@
 DROP DATABASE IF EXISTS krautundrueben;
-CREATE DATABASE IF NOT EXISTS krautundrueben;
+CREATE DATABASE IF NOT EXISTS krautundrueben ;
 USE krautundrueben;
+
+Create Table Ort (
+	IDOrt int not null auto_increment,
+    constraint PK_IDOrt primary key (IDOrt),
+    PLZ Varchar (20),
+    Ort Varchar (155)
+);
+
+Create Table Adresse (
+	IDAdresse int not null auto_increment,
+    constraint PK_IDAdresse Primary key (IDAdresse),
+    Strasse Varchar (155),
+    HausNr varchar (50),
+    IDOrt int not null
+);	
 
 CREATE TABLE KUNDE (
     KUNDENNR        INT NOT NULL PRIMARY KEY,
     NACHNAME        VARCHAR(50),
     VORNAME         VARCHAR(50),
     GEBURTSDATUM    DATE,
-    STRASSE         VARCHAR(50),
-    HAUSNR          VARCHAR(6),
-    PLZ             VARCHAR(5),
-    ORT             VARCHAR(50),
+    IDADRESSE		INT NOT NULL,
     TELEFON         VARCHAR(25),
     EMAIL           VARCHAR(50)
 );
@@ -74,13 +86,14 @@ CREATE TABLE BESTELLZUTAT (
 CREATE TABLE LIEFERANT (
     LIEFERANTENNR   INTEGER NOT NULL PRIMARY KEY,
     LIEFERANTENNAME VARCHAR(50),
-    STRASSE         VARCHAR(50),
-    HAUSNR          VARCHAR(6),
-    PLZ             VARCHAR(5),
-    ORT             VARCHAR(50),
+    IDADRESSE		INT NOT NULL,
     TELEFON         VARCHAR(25),
     EMAIL           VARCHAR(50)
 );
+
+
+
+
 
 /******************************************************************************/
 /***                              Foreign Keys                              ***/
@@ -96,3 +109,6 @@ ALTER TABLE REZEPTBESTELL ADD FOREIGN KEY (BESTELLNR) REFERENCES BESTELLUNG (BES
 ALTER TABLE REZEPTBESTELL ADD FOREIGN KEY (REZEPTNR) REFERENCES REZEPT (REZEPTNR);
 ALTER TABLE KATEGORIEREZEPT ADD FOREIGN KEY (KATEGORIENR) REFERENCES KATEGORIE (KATEGORIENR);
 ALTER TABLE KATEGORIEREZEPT ADD FOREIGN KEY (REZEPTNR) REFERENCES REZEPT (REZEPTNR);
+Alter Table Adresse Add Foreign Key (IDOrt) references Ort(IDOrt);
+Alter Table Kunde Add Foreign Key (IDAdresse) references Adresse(IDAdresse);
+Alter Table Lieferant Add Foreign Key (IDAdresse) references Adresse(IDAdresse);
