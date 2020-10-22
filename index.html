@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online-Shopping | Krautundrüben</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img class="navbar-brand" href="#"
+            src="https://www.krautundrueben.de/wp-content/uploads/2017/02/logo-kur-new.jpg"
+            style="height: 60px;width: 290px;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active col-4">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item col-4">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item col-6">
+                    <a class="nav-link" href="index2.html">Data protection</a>
+                </li>
+                <li class="nav-item dropdown col-4">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More Info
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="contaier-fluid pl-0 pr-0">
+        <video class="col-12 pl-0 pr-0" autoplay muted loop
+            src="videoblocks-plenty-of-ripe-vegetables_stwsvrmib__405abdf37cf04c50fedb05d48c0bca7e__P1080.mp4"></video>
+    </div>
+
+    <div class="container-fluid">
+        <h1 style="position: relative;top: -650px;color: white;background-color: rgba(0, 0, 0, 0.164);text-shadow: 2px 2px black;"
+            class="col-6 offset-3">Welcome to our <b>Online-Shopping Website</b></h1>
+        <p style="position: relative;top: -600px;color: white;text-shadow: 1px 1px black;" class="col-8 offset-2">Online
+            shopping is a form of electronic commerce which allows you to buy goods or services over the Internet using
+            a web browser. Online stores enables you to use "search" features to find specific models, brands or items.An online shop evokes the physical analogy of buying products or services at a regular "bricks-and-mortar" retailer or shopping center; the process is called business-to-consumer (B2C) online shopping. 
+        </p>
+        <button style="position: relative;top: -550px;" class="btn btn-danger col-4 offset-4">More Info</button>
+    </div>
+
+    <div class="container">
+        <h1 class="offset-5">About us</h1><br>
+        <p class="offset-2 col-8">Online shopping is a form of electronic commerce which allows you to buy goods or services
+            over the Internet using a web browser.Online stores enables you to use "search" features to find specific models, brands or items. We wish you the Best with our healthy vegetables at our Online-Shopping Website.</p>
+        <p class="offset-5">Made by Our Team</p>
+    </div><br><br><br><br><br><br>
+    <div class="container">
+        <div id="artikel-liste">
+            <h1 class="offset-5">Products</h1>
+        </div>
+    </div><br><br><br>
+
+    <div class="container" style="display: flex;">
+        <div class="border border-dark col-2 rounded"><br>
+            <img src="https://fresh-and-go.de/media/image/product/101/lg/zuchini-3stueck-1kg-.jpg" class="col-12"><br><br>
+            <p><b class="offset-4">Zucchini</b></p>
+            <p><b class="offset-3">Price:</b>0.89€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button1()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add1()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded">
+            <img src="https://www.krzbb.de/img_10591750L_13_die-zwiebel.jpg" class="col-12">
+            <p><b class="offset-4">Zwiebel</b></p>
+            <p><b class="offset-3">Price:</b>0.15€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button2()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add2()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded"><br>
+            <img src="https://www.lebensbaum.com/files/styles/greige_image_476x476/public/images/greiges/tomate1.jpg?itok=9wHllUbF" class="col-12"><br><br>
+            <p><b class="offset-4">Tomate</b></p>
+            <p><b class="offset-3">Price:</b>0.45€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button3()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add3()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded">
+            <img src="https://img.nzz.ch/C=W1482,H2223,X89,Y92/S=W1000/O=75/https://nzz-img.s3.amazonaws.com/2019/3/13/3ccf877f-a1dc-4dd1-a250-82331608d01f.png" class="col-11">
+            <p><b class="offset-4">Schalotte</b></p>
+            <p><b class="offset-3">Price:</b>0.20€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button4()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add4()">Add</button>
+        </div>
+    </div>
+    <br>
+    <div class="container" style="display: flex;">
+        <div class="border border-dark col-2 rounded">
+            <img src="https://www.lebensmittellexikon.de/bilder/karotten.jpg" class="col-12">
+            <p><b class="offset-4">Karotte</b></p>
+            <p><b class="offset-3">Price:</b>0.30€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button5()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add5()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded">
+            <img src="https://www.kartoffel-mueller.de/images/product_images/original_images/Gunda.jpg" class="col-12">
+            <p><b class="offset-4">Kartoffel</b></p>
+            <p><b class="offset-3">Price:</b>0.90€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button6()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add6()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded">
+            <img src="data:image/jpeg;base64,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" class="col-12">
+            <p><b class="offset-4">Rucola</b></p>
+            <p><b class="offset-3">Price:</b>0.45€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button7()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add7()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded">
+            <img src="https://ais.badische-zeitung.de/piece/09/c2/63/cc/163734476-h-720.jpg" class="col-12">
+            <p><b class="offset-4">Lauch</b></p>
+            <p><b class="offset-3">Price:</b>1.20€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button8()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add8()">Add</button>
+        </div>
+    </div>
+    <br>
+    <div class="container" style="display: flex;">
+        <div class="border border-dark col-2 rounded">
+            <img src="https://www.meine-ernte.de/fileadmin/_processed_/a/f/csm_shutterstock_30978733_4e21f109da.jpg" class="col-12"><br><br><br>
+            <p><b class="offset-3">Knoblauch</b></p>
+            <p><b class="offset-3">Price:</b>0.25€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button9()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add9()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded">
+            <img src="https://www.lebensbaum.com/files/styles/greige_image_476x476/public/images/greiges/basilikum1.jpg?itok=SLCzXT8r" class="col-12">
+            <p><b class="offset-4">Basilikum</b></p>
+            <p><b class="offset-3">Price:</b>1.30€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button10()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add10()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded">
+            <img src="https://www.unsereheimat.de/files/import/produkte/438-detailimage.png" class="col-12"><br><br><br>
+            <p><b class="offset-3">Süßkartoffel</b></p>
+            <p><b class="offset-3">Price:</b>2.00€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button11()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add11()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded">
+            <img src="https://www.regio-delivery.de/wp-content/uploads/2018/08/DSC_0737Schnittlauch.jpg" class="col-12">
+            <p><b class="offset-4">Schnittlauch</b></p>
+            <p><b class="offset-3">Price:</b>0.90€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button12()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add12()">Add</button>
+        </div>
+    </div>
+    <br>
+    <div class="container" style="display: flex;">
+        <div class="border border-dark col-2 rounded">
+            <img src="https://www.neurodermitis-bund.de/assets/images/a/apfel_juni_2019-40b09b3f.jpg" class="col-12">
+            <p><b class="offset-4">Apfel</b></p>
+            <p><b class="offset-3">Price:</b>1.20€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button13()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add13()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded"><br>
+            <img src="https://www.lidl.de/media/product/0/0/3/7/6/7/1/milbona-frischmilch-3-5-fett-zoom--3.jpg" class="col-12"><br>
+            <p><b class="offset-4">Vollmilch</b></p>
+            <p><b class="offset-3">Price:</b>1.50€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button14()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add14()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded">
+            <img src="https://sc01.alicdn.com/kf/UT8t9sSXwdXXXcUQpbXM.png" class="col-12">
+            <p><b class="offset-4">Mozzarella</b></p>
+            <p><b class="offset-3">Price:</b>3.50€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button15()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add15()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded"><br>
+            <img src="https://www.tagesspiegel.de/images/heprodimagesfotos84120170714wirt_butter_331_1_20170713164221949-jpg/20059860/3-format43.jpg" class="col-12"><br><br>
+            <p><b class="offset-4">Butter</b></p>
+            <p><b class="offset-3">Price:</b>3.00€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button16()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add16()">Add</button>
+        </div>
+    </div>
+    <br>
+    <div class="container" style="display: flex;">
+        <div class="border border-dark col-2 rounded">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQGwID6tkGx8PtMN5WNSAHu57hpSuqTX8MxGA&usqp=CAU" class="col-12">
+            <p><b class="offset-5">Ei</b></p>
+            <p><b class="offset-3">Price:</b>0.40€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button17()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add17()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/41d6HD1nR3L._SX425_.jpg" class="col-12">
+            <p><b class="offset-0">Wiener Würstchen</b></p>
+            <p><b class="offset-3">Price:</b>1.80€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button18()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add18()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded">
+            <img src="https://www.kindpng.com/picc/m/267-2679437_tofu-wiener-tofu-sausages-hd-png-download.png" class="col-12">
+            <p><b class="offset-1">Tofu-Würstchen</b></p>
+            <p><b class="offset-3">Price:</b>1.80€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button19()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add19()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded"><br>
+            <img src="https://thumbs.dreamstime.com/b/couscous-isolated-white-background-37227081.jpg" class="col-12"><br><br>
+            <p><b class="offset-3">Couscous</b></p>
+            <p><b class="offset-3">Price:</b>1.90€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button20()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add20()">Add</button>
+        </div>
+    </div>
+    <br>
+    <div class="container" style="display: flex;">
+        <div class="border border-dark col-2 rounded">
+            <img src="https://www.egle.de/media/catalog/product/cache/1/image/1200x/040ec09b1e35df139433887a97daa66f/k/l/klare-gemuesebruehe-produkt.jpg" class="col-12">
+            <p><b class="offset-2">Gemüsebrühe</b></p>
+            <p><b class="offset-3">Price:</b>0.20€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button21()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add21()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded">
+            <img src="https://www.deinekleinmarkthalle.de/wp-content/uploads/2015/07/p-2458-kichererbsen-hl.jpg" class="col-12">
+            <p><b class="offset-2">Kichererbsen</b></p>
+            <p><b class="offset-3">Price:</b>1.00€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button22()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add22()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded"><br>
+            <img src="https://www.chefsculinar.de/chefsculinar/ds_img/assets_800/wk-01-rindfleisch_rdax_850x567.jpg" class="col-12"><br><br>
+            <p><b class="offset-3">Rindfleisch</b></p>
+            <p><b class="offset-3">Price:</b>1.00€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button23()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add23()">Add</button>
+        </div>
+        <div class="border border-dark col-2 offset-1 rounded"><br>
+            <img src="https://www.kostenlose-rezepte.eu/upload/Haehnchenbrustfilets-mit-Curry-1470.jpg" class="col-12"><br><br>
+            <p><b class="offset-0">Hähnchenbrustfilets</b></p>
+            <p><b class="offset-3">Price:</b>2.60€</p>
+            <button class="btn btn-outline-dark col-12" type="button" onclick="button24()">More Info</button>
+            <br><br>
+            <button class="btn btn-outline-success col-12" type="button" onclick="Add24()">Add</button>
+        </div>
+    </div>
+    <br>
+    <div class="menu-widget2 col-6 border border-dark rounded offset-3">
+        <p style="margin-bottom: 50px; margin-top: 20px;"><i class="offset-4"></i><b style="font-size: 40px;">Warenkorb</b></p>
+        <div>
+            <p>
+                <h class="offset-0"><b>Menge:</b></h>
+                <h class="offset-4"><b>Art:</b></h>
+                <h class="offset-4"><b>Preis:</b></h>
+            </p>
+        </div>
+
+        <div>
+            <p id="Products1">Leer...</p><br>
+            <p id="Products2">Leer...</p><br>
+            <p id="Products3">Leer...</p><br>
+            <p id="Products4">Leer...</p><br>
+            <p id="Products5">Leer...</p><br>
+        </div>
+
+        <hr class="hr">
+        <div><b class="offset-lg-0">Gesamtbetrag:</b><a id="demo8" class="offset-lg-4"></a></div>
+        <hr class="hr">
+        <button type="button" class="btn btn-outline-danger col-lg-12" onclick="window.location.reload();" style="margin-bottom: 10px;">Abbbrechen</button>
+        <button type="button" class="btn btn-outline-success col-lg-12" ><a href="index3.html" style="color: green;">Zur Kasse</a></button>
+        <p id="demo7"></p>
+        <hr class="hr">
+        <div style="font-size: 12px;" class="col-lg-12">Wir von Online Shopping machen aus modernste tragbare Kleidung für viele Anlässe und zu fairen Preisen.</div>
+    </div>
+    <br>
+    <br>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="color: rgb(255, 255, 255);">
+        <br>
+        <p class="offset-5">Designed by Rouny Alkalash</p>
+    </nav>
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
